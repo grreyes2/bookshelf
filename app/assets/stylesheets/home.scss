@@ -1,0 +1,21 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.about {
+  opacity: .7;
+  background-color: #16697A;
+  height: 450px;
+  width: 450px;
+  margin-top: 100px;
+  margin-left: 150px;
+  text-align: center;
+}
+
+#welcome-text {
+  color: white;
+  margin-top: 30px;
+  display: inline-block;
+  align-items: center;
+  font-size: 30px;
+}
