@@ -1,7 +1,12 @@
 class FavoritesController < ApplicationController
+
+  def index
+
+  end
+
   def update
       favorite = Favorite.where(book: Book.find(params[:book]), user: current_user)
-      if favorite = []
+      if favorite == []
         #Create favorite
         Favorite.create(book: Book.find(params[:book]), user: current_user)
         @favorite_exists = true
@@ -15,4 +20,7 @@ class FavoritesController < ApplicationController
         format.js {}
     end
   end
+
+
+
 end

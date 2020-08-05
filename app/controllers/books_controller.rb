@@ -10,6 +10,7 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @favorite_exists = Favorite.where(book: @book, user: current_user) == [] ? false : true
   end
 
   # GET /books/new

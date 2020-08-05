@@ -1,10 +1,12 @@
 <body class="index">
-  <p id="notice"><%= notice %></p>
 
   <div class="books-index">
-    <h1>Books</h1>
-
-    <table>
+    <br>
+    <br>
+    <br>
+    <h1 style="color: white;">Books</h1>
+    <br>
+    <table class="books-table">
       <thead>
         <tr>
           <th>Title</th>
@@ -22,9 +24,9 @@
             <td><%= book.author %></td>
             <td><%= truncate(book.summary, :length => 200) %></td>
             <td><%= book.rating %></td>
-            <td><%= link_to 'Show', book %></td>
-            <td><%= link_to 'Edit', edit_book_path(book) %></td>
-            <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', book, class: "a-primary" %></td>
+            <td><%= link_to 'Edit', edit_book_path(book), class: "a-primary"  %></td>
+            <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: "a-primary"  %></td>
           </tr>
         <% end %>
       </tbody>
@@ -33,6 +35,6 @@
     <br>
   </div>
 
-  <%= link_to 'New Book', new_book_path %>
+  <%= link_to 'New Book', new_book_path, class: "a-primary"  %>
 
 </body>

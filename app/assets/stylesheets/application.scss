@@ -13,13 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap";
 
 html {
   min-height: 100%;
 }
 
-body {
+body.devise {
   min-height: 100%;
   background-image: image-url('/assets/books.jpg');
   background-size: 100%;
@@ -30,12 +31,48 @@ body {
   background-color: white;
 }
 
-.form {
+//Sign in form
+.wrapper {
+  max-width: 400px;
+  min-height: 500px;
+  margin-left: 160px;
+  margin-top: 70px;
+  position: relative;
+  background-color: #E0360B;
+  box-sizing: border-box;
+  opacity: .83;
+  border-radius: 20px;
+}
+
+
+.signin-form {
+  padding-top: 50px;
+  text-align: center;
+  color: white;
   font-family: bookman;
-  margin-top: 100px;
+}
+
+.field input {
+  border-radius: 2px;
+  border-width: thin;
+  border-style: none;
+  color: black;
+  background-color: white;
+}
+
+
+.edit-form {
+  font-family: bookman;
+  margin-top: 30px;
   margin-left: 250px;
 }
 
-#sign-up {
-  text-align: right;
+
+.devise-links {
+  color: white;
+}
+
+.submit {
+  background-color: white;
+  color: black;
 }

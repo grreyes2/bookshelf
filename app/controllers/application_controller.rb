@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 
+  def favorite_text
+    return @favorite_exists ? "unfavorite" : "Favorite"
+  end
+
+  helper_method :favorite_text
+
     protected
 
     # If you have extra params to permit, append them to the sanitizer.

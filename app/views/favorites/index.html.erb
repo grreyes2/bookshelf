@@ -1,0 +1,18 @@
+
+<table class="favorites-table">
+
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% current_user.favorites.each do |favorite| %>
+    <td><%= link_to favorite.book.title, favorite.book, class: "a-primary"%></td>
+    <td><%= favorite.book.author %></td>
+  </tbody>
+    <% end %>
+
+</table>

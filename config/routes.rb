@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'favorites/index'
   get 'favorites/update'
   resources :books
   devise_for :users
