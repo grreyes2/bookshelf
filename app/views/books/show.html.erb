@@ -20,6 +20,11 @@
   <%= @book.rating %>
 </p>
 
+<p>
+  <strong>Rating:</strong>
+    <%= image_tag @book.cover, :size => '260x260' %>
+</p>
+
 <%= link_to favorite_text, favorites_update_path(book: @book), id:'favorite_link', remote: true %>
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

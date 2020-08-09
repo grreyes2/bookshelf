@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+#image_processing
+gem 'image_processing'
+#postgres
+gem 'pg'
+#pgsearch
+gem 'pg_search'
 #jquery
 gem 'jquery-rails'
 #Bootstrap

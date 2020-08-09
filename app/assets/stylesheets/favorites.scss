@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.favorites-table {
-  background-color: #E0360B;
-  border: 1px solid #E0360B;
-  width: 100%;
-  color: white;
+ body.favorites {
+   min-height: 100%;
+   background-color: rgba(239, 35, 60, 0.9);
+ }
+
+.book-grid{
+  min-height: 100%;
+  padding-top: 50px;
 }
 
-.a-primary {
-  color: white;
+.book-cover {
+  border-radius: 3px;
 }

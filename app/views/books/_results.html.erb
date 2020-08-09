@@ -1,0 +1,28 @@
+
+<div class="book-grid">
+  <% @search_results_books.each do |book| %>
+  <div class="card">
+    <div class="card-image">
+      <figure class="">
+        <%= image_tag (book.cover), :size => '238x335' %>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title">
+            <%= book.title %>
+          </p>
+          <p class="book-text">
+            <%= book.author %>
+            <%= link_to 'Edit', edit_book_path(book), class: "a-primary"  %>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <% end %>
+
+</div>

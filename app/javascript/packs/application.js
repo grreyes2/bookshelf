@@ -11,6 +11,7 @@ require("jquery")
 
 // Bootstrap
 //= require jquery3
+//= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
 
@@ -23,7 +24,7 @@ require("jquery")
 
 //alert fade
 $(function() {
-  $('.alert').delay(500).fadeIn('normal', function() {
-    $(this).delay(2500).fadeOut();
+  $('.alert').delay(1500).fadeIn('normal', function() {
+    $(this).delay(1500).fadeOut();
   });
 });

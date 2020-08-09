@@ -1,18 +1,28 @@
-
-<table class="favorites-table">
-
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-    </tr>
-  </thead>
-
-  <tbody>
+<body class="favorites">
+  <div class="book-grid">
     <% current_user.favorites.each do |favorite| %>
-    <td><%= link_to favorite.book.title, favorite.book, class: "a-primary"%></td>
-    <td><%= favorite.book.author %></td>
-  </tbody>
+    <div class="card">
+      <div class="card-image">
+        <figure class="">
+          <%= image_tag (favorite.book.cover), :size => '238x335', class: "book-cover"  %>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title">
+              <%= favorite.book.title %>
+            </p>
+            <p class="book-text">
+              <%= favorite.book.author %>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
     <% end %>
 
-</table>
+  </div>
+</body>
