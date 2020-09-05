@@ -16,6 +16,8 @@
 
 @import "bootstrap";
 
+//Layout styling
+
 html {
   min-height: 100%;
 }
@@ -32,7 +34,7 @@ body.devise {
 }
 
 //Sign in form
-.wrapper {
+.wrapper.sign-in {
   max-width: 400px;
   min-height: 500px;
   margin-left: 160px;
@@ -60,10 +62,33 @@ body.devise {
   background-color: white;
 }
 
+//Edit account
 
 .edit-form {
+  color: white;
+  height: 100%;
+  width: 40%;
+  padding-top: 20px;
+  padding-left: 30px;
+  background-color: #177E81;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 5px;
+  border-color: white;
+  margin-left: 100px;
   font-family: bookman;
+}
 
+.edit-field input {
+  border-radius: 2px;
+  border-width: thin;
+  border-style: solid;
+}
+
+//Navigation
+
+.nav-item {
+  margin-left: 7px;
 }
 
 
@@ -74,4 +99,9 @@ body.devise {
 .submit {
   background-color: white;
   color: black;
+}
+
+//Logout button
+#logout-button {
+  color: #F17F29;
 }

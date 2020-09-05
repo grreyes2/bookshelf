@@ -10,7 +10,7 @@ class BooksController < ApplicationController
           format.js { render partial: 'search-results'}
         end
     else
-      @books = Book.all
+      @books = Book.paginate(:page => params[:page], :per_page=>10)
     end
   end
 

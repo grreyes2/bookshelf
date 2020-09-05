@@ -1,23 +1,22 @@
 <body class="index">
+  <script src="https://kit.fontawesome.com/42a72c5cd7.js" crossorigin="anonymous"></script>
+
+  <h1 id="index-heading">Books</h1>
+
+  <div class="new-book float-right" style="margin-right: 150px; margin-top: 27px;">
+    <%= link_to 'Add Book', new_book_path, class: "btn btn-danger" %>
+  </div>
 
   <div class="search-section">
-    <br>
-    <br>
-    <h1 style="color: white;">Books</h1>
-    <br>
-    <br>
+
     <!-- Search -->
-    <h4 style="color: white;">Search:</h4>
       <%= form_tag(books_path, method: :get, remote: true) do %>
         <%= text_field_tag(:search, params[:search], placeholder: "Enter search...", class: "text-field") %>
         <%= submit_tag ("Search"), class: "submit btn-sm" %>
       <% end %>
 
-    <br>
 
-    </div>
-
-
+  </div>
       <div class="book-grid">
         <% @books.each do |book| %>
         <div class="card rounded">
@@ -28,22 +27,22 @@
           </div>
           <div class="card-content">
             <div class="media">
-              <div class="media-content">
+              <div class="media-content" style="margin-left: 10px;">
                 <p class="title">
                   <%= book.title %>
                 </p>
                 <p class="book-text">
                   <%= book.author %>
-                  <%= link_to 'Edit', edit_book_path(book), class: "a-primary"  %>
                 </p>
+
+                <%= link_to '', edit_book_path(book), class: "far fa-edit", style: "color: black;" %>
+                <%= link_to '', book_path(book.id), class: "far fa-eye", style: "color: black;"%>
+
               </div>
-
             </div>
-
           </div>
         </div>
         <% end %>
-
       </div>
 
 
@@ -51,6 +50,7 @@
     <div id="search-results">
 
     </div>
+    <%= will_paginate @users , :style=> "margin-left: 100px; margin-top: 30px;"%>
 
 
 </body>

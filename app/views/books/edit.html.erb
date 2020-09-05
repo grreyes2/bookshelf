@@ -1,6 +1,4 @@
-<h1>Editing Book</h1>
+<h1 class="edit-label">Edit Book</h1>
 
 <%= render 'form', book: @book %>
-
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Delete', book_path(book: @book), data: {:confirm => 'Are you sure?'},:method => :delete , class: "btn btn-danger wrapper book-form" %>

@@ -21,7 +21,7 @@
 
     <% if user_signed_in? %>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbar-Nav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="/books/">Books</a>
@@ -30,13 +30,16 @@
             <a class="nav-link" href="/favorites/index/">Favorites</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/review/">Review</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/users/edit/">Account</a>
           </li>
-          <li class="nav-link" style="margin-left: 825px; color: black;">
+          <li class="nav-link" style="margin-left: 700px; margin-right: 15px; color: black;">
             Hello, <strong><%= current_user.first_name %></strong>
           </li>
-          <li style="margin-left: 2px;" class="nav-link">
-            <strong><%= link_to 'Logout', destroy_user_session_path, method: :delete %></strong>
+          <li class="nav-link">
+            <strong><%= link_to 'Logout', destroy_user_session_path, method: :delete, id: "logout-button" %></strong>
           </li>
         </ul>
       </div>

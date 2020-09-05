@@ -2,27 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+//Book Index
+
 body.index {
-  background-color: #2E4057;
+  background-color: #ffff;
 
 }
+
+body.book-form-background {
+  background-color: #929ea3;
+}
+
+#index-heading {
+  margin-left: 100px;
+  margin-top: 30px;
+  color: black;
+}
+
+//Search
 
 .search-section {
-  padding-left: 100px;
+  margin-top: 47px;
+  margin-left: 100px;
 }
 
+.submit {
+  border-style: solid;
+  border-color: grey;
+}
 
 .a-primary {
-  color: white;
+  padding-left: 5px;
+  color: red;
 }
 
-.text-field {
-  border-radius: 2px;
-  border-width: thin;
-  border-style: none;
-  color: black;
-  background-color: white;
+
+#index-heading {
+
 }
+
+#search-heading {
+
+}
+
+
+//Bookshelf
 
 .book-grid {
   margin-left: 100px;
@@ -40,12 +64,32 @@ body.index {
   border-radius: 3px;
 }
 
-.submit {
-  background-color: white;
-  color: black;
-  border-style: none;
-}
 
 .title {
   font-size: 20px;
+}
+
+//Form
+
+//Edit
+
+.edit-label {
+  margin-top: 10px;
+  margin-left: 550px;
+  color: white;
+}
+
+.book-field {
+
+  min-width: 500px;
+  min-height: 20px;
+  border-radius: 5px;
+  border-style: solid;
+  margin-bottom: 20px;
+}
+
+.wrapper.book-form {
+  margin-top: 30px;
+  margin-left: 400px;
+  color: white;
 }

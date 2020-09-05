@@ -3,8 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
-#image_processing
-gem 'image_processing'
+#pagination
+gem 'will_paginate'
+#cancancan
+gem 'cancancan'
 #postgres
 gem 'pg'
 #pgsearch
